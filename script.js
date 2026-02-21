@@ -87,3 +87,19 @@ let randomSpeed=(Math.random()*100).toFixed(2);
 document.getElementById("speed").innerText=randomSpeed+" Mbps";
 },2000);
 }
+// Section Switcher
+function showSection(sectionId){
+    let sections = document.querySelectorAll(".section");
+    sections.forEach(sec => sec.style.display="none");
+    document.getElementById(sectionId).style.display="block";
+}
+
+// Add Random Device
+function addDevice(){
+    let randomDevices = ["Oppo A17","Dell Laptop","Vivo Y21","Xiaomi Note","iPad"];
+    let device = randomDevices[Math.floor(Math.random()*randomDevices.length)];
+    
+    let li = document.createElement("li");
+    li.innerText = device;
+    document.getElementById("deviceList").appendChild(li);
+}

@@ -9,15 +9,19 @@
 
 <div class="sidebar">
 <h2>My Router</h2>
-<a href="#">Dashboard</a>
-<a href="#">Devices</a>
-<a href="#">Settings</a>
+
+<a href="#" onclick="showSection('dashboard')">Dashboard</a>
+<a href="#" onclick="showSection('devices')">Devices</a>
+<a href="#" onclick="showSection('settings')">Settings</a>
 <a href="#" onclick="logout()">Logout</a>
 <button onclick="toggleTheme()">Dark/Light</button>
+
 </div>
 
 <div class="main">
 
+<!-- Dashboard Section -->
+<div id="dashboard" class="section">
 <div class="card">
 <h3>🌐 Public IP</h3>
 <p id="ipAddress">Loading...</p>
@@ -30,23 +34,31 @@
 </div>
 
 <div class="card">
-<h3>💻 Connected Devices</h3>
-<ul id="deviceList"></ul>
-</div>
-
-<div class="card">
-<h3>🚀 Internet Speed Monitor</h3>
+<h3>🚀 Internet Speed</h3>
 <p id="speed">0 Mbps</p>
 </div>
+</div>
 
+<!-- Devices Section -->
+<div id="devices" class="section" style="display:none;">
+<div class="card">
+<h3>💻 Connected Devices</h3>
+<ul id="deviceList"></ul>
+<button onclick="addDevice()">Add Random Device</button>
+</div>
+</div>
+
+<!-- Settings Section -->
+<div id="settings" class="section" style="display:none;">
 <div class="card">
 <h3>🔐 Change Admin Password</h3>
 <input type="password" id="newPass" placeholder="New Password">
 <button onclick="changePassword()">Change Password</button>
+</div>
 </div>
 
 </div>
 
 <script src="script.js"></script>
 </body>
-</html>
+  </html>

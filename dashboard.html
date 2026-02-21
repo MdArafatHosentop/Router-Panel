@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Router Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>My Router</h2>
+  <a href="#">Dashboard</a>
+  <a href="#">WiFi Settings</a>
+  <a href="#" onclick="logout()">Logout</a>
+</div>
+
+<div class="main">
+  <div class="card">
+    <h3>WiFi Control</h3>
+    <p>Status: <b id="wifiStatus" style="color:green;">ON</b></p>
+    <button onclick="toggleWiFi()" id="wifiBtn">Turn OFF</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

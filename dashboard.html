@@ -1,24 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Router Dashboard</title>
-  <link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Router Dashboard</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="sidebar">
-  <h2>My Router</h2>
-  <a href="#">Dashboard</a>
-  <a href="#">WiFi Settings</a>
-  <a href="#" onclick="logout()">Logout</a>
+<h2>My Router</h2>
+<a href="#">Dashboard</a>
+<a href="#">Devices</a>
+<a href="#">Settings</a>
+<a href="#" onclick="logout()">Logout</a>
+<button onclick="toggleTheme()">Dark/Light</button>
 </div>
 
 <div class="main">
-  <div class="card">
-    <h3>WiFi Control</h3>
-    <p>Status: <b id="wifiStatus" style="color:green;">ON</b></p>
-    <button onclick="toggleWiFi()" id="wifiBtn">Turn OFF</button>
-  </div>
+
+<div class="card">
+<h3>🌐 Public IP</h3>
+<p id="ipAddress">Loading...</p>
+</div>
+
+<div class="card">
+<h3>📶 WiFi Control</h3>
+<p>Status: <b id="wifiStatus" style="color:green;">ON</b></p>
+<button onclick="toggleWiFi()" id="wifiBtn">Turn OFF</button>
+</div>
+
+<div class="card">
+<h3>💻 Connected Devices</h3>
+<ul id="deviceList"></ul>
+</div>
+
+<div class="card">
+<h3>🚀 Internet Speed Monitor</h3>
+<p id="speed">0 Mbps</p>
+</div>
+
+<div class="card">
+<h3>🔐 Change Admin Password</h3>
+<input type="password" id="newPass" placeholder="New Password">
+<button onclick="changePassword()">Change Password</button>
+</div>
+
 </div>
 
 <script src="script.js"></script>
